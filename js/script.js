@@ -33,7 +33,7 @@ jQuery('#videoGames').on('click', '.media', function(){
     $('#loading-animation1').toggleClass('d-none');
     axios.get(videoGameUrl).then(function(response){
         const {id, name, price, country, releaseYear, image} = response.data;
-        $('#loading-animation1').hide();
+        $('#loading-animation1').toggleClass('d-none');
         $('#videoGame').html(`
         <div class="card" style="width: 18rem;">
         <img src="${image}" alt="Photo of ${name}">
